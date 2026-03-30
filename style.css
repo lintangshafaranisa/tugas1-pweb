@@ -1,0 +1,191 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(243, 226, 245);
+    padding-top: 140px;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #d291ff, #a64dff);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+header table {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 16px;
+}   
+
+nav a:hover {
+    color: rgb(225, 184, 238);
+}
+
+/* ================= HERO ================= */
+.hero {
+    margin-top: 120px;
+    height: 250px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 28px;
+}
+
+/* ================= GRID CARD ================= */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #f5d6ff;
+}
+
+/* ================= FORM ================= */
+.form-section {
+    padding: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+input:focus {
+    border: 2px solid purple;
+    outline: none;
+}
+
+button {
+    background: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: darkviolet;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* ================= SIDEBAR ================= */
+aside {
+    padding: 20px;
+}
+
+.filter {
+    margin-top: 20px;
+}
+
+.filter input {
+    margin-right: 5px;
+}
+
+/* ================= FOOTER ================= */
+footer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+footer td {
+    background: transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+footer tr:nth-child(even) {
+    background: transparent;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
