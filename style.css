@@ -1,399 +1,261 @@
 /* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/* ================= NAVBAR ================= */
-nav {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 220px;
-    height: 80px;
-    background: linear-gradient(180deg, #8e44ad, #d291ff);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #d291ff, #a64dff);
-    padding: 15px 30px;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-header table {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: none;
-    outline: none;
-}
-header img {
-    display: block;
-    border: none;
-}
-
-header h1 {
-    color: white;
-    margin: 0;
-}
-/* CONTAINER HEADER */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* LOGO + JUDUL */
-.logo-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* SEARCH BOX */
-.search-box {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 25px;
-    overflow: hidden;
-}
-
-/* INPUT */
-.search-box input {
-    border: none;
-    padding: 8px 12px;
-    outline: none;
-}
-
-/* BUTTON */
-.search-box button {
-    border: none;
-    background: #8e44ad;
-    color: white;
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-.search-box button:hover {
-    background: #6d2c91;
-}
-
-nav {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-nav a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    font-size: 16px;
-}   
-
-nav a:hover {
-    color: rgb(225, 184, 238);
-}
-
-/* ================= HERO ================= */
-.hero {
-    margin-top: 120px;
-    height: 250px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://via.placeholder.com/1200x400');
-    background-size: cover;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 28px;
-}
-
-/* ================= GRID CARD ================= */
-.cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    background: #f5d6ff;
-}
-
-/* ================= FORM ================= */
-.form-section {
-    padding: 20px;
-}
-
-input, button {
-    padding: 10px;
-    margin: 5px 0;
-    width: 100%;
-}
-
-input:focus {
-    border: 2px solid purple;
-    outline: none;
-}
-
-button {
-    background: purple;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: darkviolet;
-}
-
-/* ================= TABLE ================= */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-th, td {
-    padding: 10px;
-}
-
-tbody tr:nth-child(even) {
-    background: #f9f9f9;
-}
-
-/* ================= SIDEBAR ================= */
-aside {
-    padding: 20px;
-}
-
-.filter {
-    margin-top: 20px;
-}
-
-.filter input {
-    margin-right: 5px;
-}
-
-/* ================= FOOTER ================= */
-footer table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-footer td {
-    background: transparent;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-}
-
-footer tr:nth-child(even) {
-    background: transparent;
-}
-
-/* BODY */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #f3e2f5, #e5c9f1);
-    padding-top: 120px;
-    margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background: linear-gradient(135deg, #f3e2f5, #e5c9f1);
 }
 
 /* ================= HEADER ================= */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #d291ff, #8e44ad);
-    padding: 15px 30px;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  left: 220px; 
+  width: calc(100% - 220px);
+  background: linear-gradient(90deg, #d291ff, #8e44ad);
+  padding: 15px 30px;
+  z-index: 1000;
 }
 
-header table {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 header h1 {
-    color: white;
-    letter-spacing: 2px;
+  color: white;
+  font-size: 22px;
+}
+
+/* SEARCH */
+.search-box input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.search-box input {
+  border: none;
+  padding: 8px;
+}
+
+.search-box button {
+  background: #8e44ad;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
 }
 
 /* ================= SIDEBAR ================= */
 nav {
-    position: fixed;
-    top: 0px;
-    left: 0;
-    width: 220px;
-    height: 100%;
-    background: linear-gradient(180deg, #8e44ad, #d291ff);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(180deg, #8e44ad, #d291ff);
+  padding: 20px;
 }
 
-/* MENU */
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border-radius: 8px;
-    transition: 0.3s;
-    font-weight: bold;
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
-/* HOVER ANIMATION */
 nav a:hover {
-    background: rgba(255,255,255,0.2);
-    transform: translateX(8px);
+  background: rgba(255,255,255,0.2);
+  transform: translateX(5px);
 }
 
 /* ================= MAIN ================= */
 main {
-    margin-left: 240px;
-    padding: 20px;
-    margin-top: 20px;
+  margin-left: 240px;
+  padding: 20px;
+  margin-top: 100px;
 }
 
-/* ================= CARD STYLE (ASIDE) ================= */
-aside {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    animation: fadeIn 0.8s ease;
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* ================= FORM ================= */
+form, input, select, button {
+  margin: 5px 0;
+  padding: 8px;
+}
+
+.form-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-section input,
+.form-section select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-section button {
+  width: 100%;
+  margin-top: 10px;
 }
 
 /* ================= TABLE ================= */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    overflow: hidden;
-    border-radius: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  /* border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
 }
 
-/* HEADER TABLE */
 th {
-    background: linear-gradient(90deg, #8e44ad, #d291ff);
-    color: white;
+  background: linear-gradient(90deg, #8e44ad, #d291ff);
+  color: white;
 }
 
-/* CELL */
 th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
 
 tbody tr:nth-child(even) {
-    background: #f9f3fc;
+  background: #f9f3fc;
 }
 
 tbody tr:hover {
-    background: #f1d9ff;
-    transition: 0.3s;
+  background: #f1d9ff;
+  transition: 0.3s;
 }
 
-* {
-    outline: none !important;
+table th,
+table td {
+  text-align: center;
+  vertical-align: middle;
 }
 
-img {
-    border: none;
+/* ================= BUTTON ================= */
+td:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
-table {
-    border: none;
+.btn {
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
+
+.btn-edit {
+  background-color: #ffc107; 
+  color: black;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-hapus {
+  background-color: #dc3545; 
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-edit:hover,
+.btn-hapus:hover {
+  opacity: 0.8;
+}
+/* ================= MODAL TAMBAH ================= */
+/* BACKGROUND GELAP */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content input {
+  margin-bottom: 12px;
+}
+
+/* TOMBOL */
+.modal-content button {
+  margin-top: 10px;
+  width: 120px;
+}
+
+/* CLOSE */
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 /* ================= FOOTER ================= */
 footer {
-    margin-left: 240px;
-    margin-top: 40px;
-    background: linear-gradient(90deg, #8e44ad, #d291ff);
-    padding: 20px;
-    color: white;
+  margin-left: 240px;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #8e44ad, #d291ff);
+  padding: 20px;
 }
 
-/* HILANGIN PUTIH */
 footer table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 footer td {
-    background: transparent;
-    /* color: white; */
-    padding: 10px;
-}
-
-footer tr:nth-child(even) {
-    background: transparent;
-}
-
-/* ICON PUTIH */
-footer img {
-    filter: brightness(0) invert(1);
-}
-
-/* ================= ANIMASI ================= */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* ================= RESPONSIVE ================= */
-@media (min-width: 600px) {
-    .cards {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  background: transparent;
+  padding: 10px;
 }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Golden Glow Salon | Layanan</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -12,14 +14,16 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
+
             <div class="logo-title">
-                <img src="logo-salon.png" width="60">
+                <img src="logo-salon.png" width="50">
                 <h1>GOLDEN GLOW SALON</h1>
             </div>
 
-            <div class="search">
-                <input type="text" placeholder="Cari layanan...">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Cari..." class="form-control mb-3">
             </div>
+
         </div>
     </header>
 
@@ -33,49 +37,69 @@
 
     <!-- MAIN -->
     <main>
-        <h2>Daftar Layanan</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>Haircut</h3>
-                <p>Potong rambut sesuai gaya yang diinginkan</p>
-                <h4>Rp 50.000</h4>
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Daftar Layanan</h1>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" type="button" id="btnTambah">Tambah Layanan</button>
             </div>
-
-            <div class="card">
-                <h3>Hair Coloring</h3>
-                <p>Pewarnaan rambut dengan berbagai pilihan warna</p>
-                <h4>Rp 150.000</h4>
-            </div>
-
-            <div class="card">
-                <h3>Hair Spa</h3>
-                <p>Perawatan rambut agar lebih sehat dan berkilau</p>
-                <h4>Rp 100.000</h4>
-            </div>
-
-            <div class="card">
-                <h3>Facial</h3>
-                <p>Perawatan wajah untuk kulit bersih dan segar</p>
-                <h4>Rp 120.000</h4>
-            </div>
-
-            <div class="card">
-                <h3>Manicure</h3>
-                <p>Perawatan kuku tangan agar rapi dan cantik</p>
-                <h4>Rp 70.000</h4>
-            </div>
-
-            <div class="card">
-                <h3>Pedicure</h3>
-                <p>Perawatan kuku kaki agar bersih dan sehat</p>
-                <h4>Rp 80.000</h4>
-            </div>
-
         </div>
+        <table border="1" id="dataLayanan">
+            <thead>
+                <tr class="text-center">
+                    <th>Kode</th>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Aksi</th>
+                </tr>
 
+            </thead>
+            <tbody id="tbodyLayanan"></tbody>
+        </table>
     </main>
+
+    <!-- modal tambah -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+            <h3>Tambah Layanan</h3>
+
+            <form id="formLayanan">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="kode" placeholder="Masukkan Kode" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Layanan" required>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="harga" placeholder="Masukkan Harga" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="judulModal">Edit Layanan</h3>
+
+            <form id="formLayanan">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="kode" placeholder="Masukkan Kode" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Layanan" required>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="harga" placeholder="Masukkan Harga" required>
+                </div>
+                <button type="submit" id="btnUbah" class="btn btn-primary">
+                    Ubah
+                </button>
+            </form>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -97,6 +121,7 @@
         <hr>
         <p>&copy; 2026 Golden Glow Salon</p>
     </footer>
+    <script src="script.js"></script>
 
 </body>
 
