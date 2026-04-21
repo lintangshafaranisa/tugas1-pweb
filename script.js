@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const btnTambah = document.getElementById("btnTambah");
   const close = document.querySelector(".close");
-  const judulModal = document.getElementById("judulModal");
+  const judulModal = document.getElementById("editModal");
 
   let layanan = JSON.parse(localStorage.getItem("layanan")) || [];
   let editIndex = -1;
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "flex";
       document.getElementById("formLayanan").reset();
       editIndex = -1;
-      if (judulModal) judulModal.innerText = "Tambah Layanan";
+      if (editModal) editModal.innerText = "Edit Layanan";
     };
   }
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     editIndex = i;
 
-    if (judulModal) judulModal.innerText = "Edit Layanan";
+    if (editModal) editModal.innerText = "Edit Layanan";
     if (modal) modal.style.display = "flex";
   };
 
