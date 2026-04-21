@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const btnTambah = document.getElementById("btnTambah");
   const close = document.querySelector(".close");
-  const judulModal = document.getElementById("editModal");
+  const judulModal = document.getElementById("judulModal");
 
   let layanan = JSON.parse(localStorage.getItem("layanan")) || [
   { kode: "A001", nama: "Potong Rambut", harga: 50000 },
@@ -14,17 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
   { kode: "A006", nama: "Facial Wajah", harga: 200000 },
   { kode: "A007", nama: "Creambath", harga: 140000 }
 ];
-  localStorage.setItem("layanan", JSON.stringify(layanan));
+    localStorage.setItem("layanan", JSON.stringify(layanan));
   let editIndex = -1;
 
   // ================= MODAL =================
   if (btnTambah) {
     btnTambah.onclick = () => {
-      modal.style.display = "flex";
-      document.getElementById("formLayanan").reset();
-      editIndex = -1;
-      if (editModal) editModal.innerText = "Edit Layanan";
-    };
+    modal.style.display = "flex";
+    form.reset();
+    editIndex = -1;
+    judulModal.innerText = "Tambah Layanan";
+};
   }
 
   if (close) {
@@ -62,18 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // ================= EDIT =================
-  window.edit = (i) => {
+    window.edit = (i) => {
     const data = layanan[i];
 
-    document.getElementById("kode").value = data.kode;
-    document.getElementById("nama").value = data.nama;
-    document.getElementById("harga").value = data.harga;
+    kode.value = data.kode;
+    nama.value = data.nama;
+    harga.value = data.harga;
 
     editIndex = i;
+    judulModal.innerText = "Edit Layanan";
 
-    if (editModal) editModal.innerText = "Edit Layanan";
-    if (modal) modal.style.display = "flex";
-  };
+    modal.style.display = "flex";
+    };
 
   // ================= HAPUS =================
   window.hapus = (i) => {
