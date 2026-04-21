@@ -5,18 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const close = document.querySelector(".close");
   const judulModal = document.getElementById("judulModal");
 
-  let layanan = JSON.parse(localStorage.getItem("layanan")) || [
-  { kode: "A001", nama: "Potong Rambut", harga: 50000 },
-  { kode: "A002", nama: "Cat Rambut", harga: 150000 },
-  { kode: "A003", nama: "Hair Spa", harga: 100000 },
-  { kode: "A004", nama: "Spa Badan", harga: 250000 },
-  { kode: "A005", nama: "Pedicure & Manicure", harga: 300000 },
-  { kode: "A006", nama: "Facial Wajah", harga: 200000 },
-  { kode: "A007", nama: "Creambath", harga: 140000 }
-];
-    localStorage.setItem("layanan", JSON.stringify(layanan));
-  let editIndex = -1;
+let layanan = JSON.parse(localStorage.getItem("layanan"));
 
+if (!layanan || layanan.length === 0) {
+  layanan = [
+    { kode: "A001", nama: "Potong Rambut", harga: 50000 },
+    { kode: "A002", nama: "Cat Rambut", harga: 150000 },
+    { kode: "A003", nama: "Hair Spa", harga: 100000 },
+    { kode: "A004", nama: "Spa Badan", harga: 250000 },
+    { kode: "A005", nama: "Pedicure & Manicure", harga: 300000 },
+    { kode: "A006", nama: "Facial Wajah", harga: 200000 },
+    { kode: "A007", nama: "Creambath", harga: 140000 }
+  ];
+
+  localStorage.setItem("layanan", JSON.stringify(layanan));
+}
   // ================= MODAL =================
   if (btnTambah) {
     btnTambah.onclick = () => {
