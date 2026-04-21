@@ -3,27 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Glow Salon | Beranda</title>
+    <title>Golden Glow Salon | Layanan</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
         <div class="header-container">
+
             <div class="logo-title">
-                <img src="logo-salon.png" width="60">
+                <img src="logo-salon.png" width="50">
                 <h1>GOLDEN GLOW SALON</h1>
             </div>
 
             <div class="search-box">
                 <input type="text" id="search" placeholder="Cari..." class="form-control mb-3">
             </div>
+
         </div>
     </header>
 
+    <!-- SIDEBAR -->
     <nav>
         <a href="index.html" class="active">Beranda</a>
         <a href="booking.html">Booking</a>
@@ -31,56 +35,58 @@
         <a href="laporan.html">Laporan Keuangan</a>
     </nav>
 
+    <!-- MAIN -->
     <main>
         <aside>
 
             <h3>Statistik Booking</h3>
+            <div class="table-container">
+                <table border="1" width="100%">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Jenis Statistik</th>
+                            <th>Jumlah</th>
+                        </tr>
+                    </thead>
 
-            <table border="1" width="100%">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Jenis Statistik</th>
-                        <th>Jumlah</th>
-                    </tr>
-                </thead>
+                    <tbody style="text-align: center;">
+                        <tr>
+                            <td>1</td>
+                            <td>Total Booking Hari Ini</td>
+                            <td id="totalBooking">0</td>
+                        </tr>
 
-                <tbody style="text-align: center;">
-                    <tr>
-                        <td>1</td>
-                        <td>Total Booking Hari Ini</td>
-                        <td id="totalBooking">0</td>
-                    </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Total Pelanggan</td>
+                            <td id="totalPelanggan">0</td>
+                        </tr>
 
-                    <tr>
-                        <td>2</td>
-                        <td>Total Pelanggan</td>
-                        <td id="totalPelanggan">0</td>
-                    </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Total Layanan</td>
+                            <td id="totalLayanan">0</td>
+                        </tr>
 
-                    <tr>
-                        <td>3</td>
-                        <td>Total Layanan</td>
-                        <td id="totalLayanan">0</td>
-                    </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Booking Selesai</td>
+                            <td id="bookingSelesai">0</td>
+                        </tr>
 
-                    <tr>
-                        <td>4</td>
-                        <td>Booking Selesai</td>
-                        <td id="bookingSelesai">0</td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>Booking Proses</td>
-                        <td id="bookingProses">0</td>
-                    </tr>
-                </tbody>
-            </table>
-
+                        <tr>
+                            <td>5</td>
+                            <td>Booking Proses</td>
+                            <td id="bookingProses">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </aside>
     </main>
-    <br><br>
+
+    <!-- FOOTER -->
     <footer>
         <p>Kontak Kami</p>
         <table>
@@ -98,9 +104,10 @@
             </tr>
         </table>
         <hr>
-        <p>&copy; 2026 Sistem Informasi Booking Layanan Salon</p>
+        <p>&copy; 2026 Golden Glow Salon</p>
     </footer>
     <script src="script.js"></script>
+
 </body>
 
 </html>
