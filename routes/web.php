@@ -2,15 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+use App\Http\Controllers\LayananController;
 
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-Route::view('/layanan', 'layanan');
+Route::get('layanan', LayananController::class);
 Route::view('/tentang', 'tentang');
-//Route::get('/hitung/{a}/{b}', function ($a, $b) {
-//     return $a + $b;
-// });
+
+
