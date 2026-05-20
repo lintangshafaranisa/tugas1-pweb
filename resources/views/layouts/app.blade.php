@@ -68,6 +68,37 @@
 
     @stack('scripts')
 
+    <script>
+        // tombol dark mode
+        const toggle =
+            document.getElementById('darkToggle');
+
+        // cek localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+
+            document.body.classList.add('dark-mode');
+
+        }
+
+        // klik tombol
+        toggle.addEventListener('click', function() {
+
+            document.body.classList.toggle('dark-mode');
+
+            // simpan mode
+            if (document.body.classList.contains('dark-mode')) {
+
+                localStorage.setItem('theme', 'dark');
+
+            } else {
+
+                localStorage.setItem('theme', 'light');
+
+            }
+
+        });
+    </script>
+
 </body>
 
 </html>

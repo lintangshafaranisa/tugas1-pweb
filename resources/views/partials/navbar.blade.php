@@ -20,4 +20,7 @@
     <a href="/booking">Booking</a>
     <a href="/layanan" class="{{ request()->is('layanan') ? 'active' : '' }}">Layanan</a>
     <a href="/laporan">Laporan Keuangan</a>
+    <button id="darkToggle">
+        Mode Gelap
+    </button>
 </nav>

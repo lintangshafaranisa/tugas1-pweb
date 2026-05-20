@@ -99,6 +99,18 @@ class LayananController extends Controller
             ->with('success', 'Layanan berhasil diupdate');
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->search;
+
+        $layanan = Layanan::where(
+            'nama_layanan',
+            'like',
+            "%$search%"
+        )->get();
+
+        return response()->json($layanan);
+    }
     /**
      * Remove the specified resource from storage.
      */
